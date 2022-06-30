@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<style>
+	
+    .container {
+padding: 2rem 0rem;
+}
+
+.h2{
+text-align: center;
+color: indianred;
+background-color: dimgray;
+
+}
+h4 {
+margin: 2rem 0rem 1rem;
+}
+.table-image {
+td, th {
+vertical-align: middle;
+}
+}
+
+
+</style>
+<h2 class=h2>Welcome to the book page...!</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+		<table class="table table-image">
+		  <thead>
+		    <tr>
+		      <th scope="col">TITLE</th>
+		      <th scope="col">IMAGE</th>
+		      <th scope="col">AUTHOR NAME</th>
+		      <th scope="col">SUMMARY</th>
+		      <th scope="col">ISBN</th>
+		      <th scope="col">Language</th>
+		      <th scope="col">Genre</th>
+			  <th scope="col">COPIES</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+			{% for book in book_list %}
+		    <tr>
+			  <td>{{book.title}}</td>
+		      <td class="w-25"><img src="#" height="300" width="200"></td>
+		      <td>#</td>
+		      <td>#</td>
+		      <td>#</td>
+		      <td>{#</td>
+		      <td>#</td>
+			  <td>#</td>
+		    </tr>
+			{% endfor %}
+		  </tbody>
+		</table>   
+    </div>
+  </div>
+</div>
+
+{% endblock  %}
